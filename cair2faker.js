@@ -36,8 +36,6 @@ const generate = (howMany) => {
   if (!howMany) return '';
   const bar1 = new cliProgress.SingleBar({}, cliProgress.Presets.shades_classic);
   bar1.start(howMany, 0);
-  console.log();
-  console.log(faker.date.past().toISOString().substring(0,17).replace(/-/g, '',).replace('T','').replace(/:/g,'')); //.substring(0,10).replace(/-/g,''));
   let data, cvx;
   for (let i=0; i<howMany; i++) {
     cvx = cvxCodes[Math.floor(Math.random() * cvxCodes.length)];
