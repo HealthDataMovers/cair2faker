@@ -64,10 +64,10 @@ const generate = (howMany) => {
      </urn:submitSingleMessage>
      </soap:Body>
     </soap:Envelope>`;
-    fs.writeFile(`samples/sample${i}.xml`, data, (fsErr) => {
+    fs.writeFileSync(`samples/sample${i}.xml`, data, (fsErr) => {
       if (fsErr) return console.log(`Error: ${fsErr}`);
-      bar1.increment();
     });
+    bar1.increment();
   }
   bar1.stop();
 };
