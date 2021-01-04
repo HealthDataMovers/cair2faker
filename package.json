@@ -1,0 +1,17 @@
+{
+  "name": "cair2faker",
+  "version": "0.0.1",
+  "description": "CDPH CAIR2 Fake Data Generator",
+  "main": "cair2faker.js",
+  "scripts": {
+    "start": "node cair2faker.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Daniel Olson <danielolson85@gmail.com>",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "cli-progress": "^3.8.2",
+    "faker": "^5.1.0",
+    "prompt": "^1.1.0"
+  }
+}
