@@ -2,6 +2,7 @@ const faker = require('faker');
 const prompt = require('prompt');
 const fs = require('fs');
 const cliProgress = require('cli-progress');
+require('dotenv').config()
 
 const sexes = ['M', 'F', 'U'];
 const suffixes = ['JR', 'SR', '', '', '', '', '', '', '', '', ''];
@@ -44,8 +45,8 @@ const generate = (howMany) => {
      <soap:Header/>
      <soap:Body>
      <urn:submitSingleMessage>
-     <urn:username>${faker.internet.userName()}</urn:username>
-     <urn:password>${faker.internet.password()}</urn:password>
+     <urn:username>${process.env.CAIR2_USERNAME}</urn:username>
+     <urn:password>${process.env.CAIR2_PASSWORD}</urn:password>
      <urn:facilityID>Portal Facility ID</urn:facilityID>
      <urn:hl7Message><![CDATA[MSH|^~\\&|MyEMR|DE-000001|
     |CAIRLO|${faker.date.recent().toISOString().substring(0,10).replace(/-/g,'')}||VXU^V04^VXU_V04|CA0001|P|2.5.1|||NE|AL||||||DE-000001
