@@ -76,5 +76,5 @@ const generate = (howMany) => {
 prompt.start();
 
 prompt.get(['messages'], (err, res) => {
-  generate(res?.messages);
+  generate(res.messages);
 });
